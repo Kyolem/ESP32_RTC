@@ -25,7 +25,9 @@ public:
     bool begin(uint8_t Adress);
 
     void setTime(uint8_t hh, uint8_t mm, uint8_t ss);
+    void setTime(const __FlashStringHelper *Time);
     void setDate(uint8_t index_day, uint8_t day, uint8_t index_month, uint8_t years);
+    void setDate(const __FlashStringHelper *Date, uint8_t index_day);
 
     uint8_t getYears();  // yy
     uint8_t getHour();   // hh
@@ -33,15 +35,17 @@ public:
     uint8_t getSecond(); // ss
     uint8_t getDay();    // 1 to 31
 
-    String getStringDay();   // Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-    String getStringMonth(); // Jan ,Feb ,Mar ,Apr ,May ,Jun ,Jul ,Aug ,Sep ,Oct ,Nov ,Dec
+    String getStringDay();   // Dim, lun, Mar, Mer, Jeu, Ven, Sam,
+    String getStringMonth(); // Jan, Fev, Mars, Avril, Mai, Juin, Juil, Aout, Sept, Oct, Nov, Dec
     String getStringTime();  // hh:mm:ss
-    String getStringDate();  // Mon M/d/yyyy
+    String getStringDate();  // day/mois/year
 
 private:
     uint8_t _adress;
     uint8_t _binToBcd(uint8_t val);
     uint8_t _bcdToBin(uint8_t val);
+    uint8_t _getindexmonth(const __FlashStringHelper *Date);
+    uint8_t _twodigittoone(const __FlashStringHelper *Date);
 };
 
 #endif

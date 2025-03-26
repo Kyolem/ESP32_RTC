@@ -1,25 +1,3 @@
-/**************************************************************************/
-/*!
-  @file     RTC3231.cpp
-
-  @mainpage Kyolem RTC3231
-
-  @section intro Introduction
-
-  This is a work of Kyolem fantastic real time clock library for Arduino.
-
-  @section classes Available classes
-
-  This library provides the following classes:
-
-  - Classes for manipulating dates, times and durations:
-    - RTC3231 represents a specific point in time; this is the data
-      type used for setting and reading the supported RTCs
-  - Interfacing specific RTC chips:
-    - RTC_DS3231
-*/
-/**************************************************************************/
-
 #include <RTC3231.h>
 
 const char *month[] = {"Nat", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
@@ -135,7 +113,7 @@ void RTC3231::setDate(const __FlashStringHelper *Date, uint8_t index_day)
     index_month = _getindexmonth(Date);
     char poubelle[3];
     day = _twodigittoone(Date);
-    sscanf(dateStr.c_str(), "%s/%d/%d", &poubelle, &day, &years);
+    sscanf(dateStr.c_str(), "%s %d %d", &poubelle, &day, &years);
     day = _twodigittoone(Date);
     Wire.beginTransmission(_adress);
     Wire.write(RTC3231_DAY_REG);
@@ -358,7 +336,12 @@ uint8_t RTC3231::_twodigittoone(const __FlashStringHelper *Date)
     uint8_t day = 0;
     if (__DATE__[4] == '0')
     {
-        day = __DATE__[5];
+        sscanf(__DATE__ + 5, "%hhu", &day);
+    }
+    else
+    {
+        char dayStr[3] = {__DATE__[4], __DATE__[5], '\0'}; // Extract day as a string
+        sscanf(dayStr, "%hhu", &day);                      // Convert the string to uint8_t
     }
     return day;
 }
