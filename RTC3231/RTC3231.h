@@ -30,13 +30,13 @@ public:
     uint8_t getYears();  // yy
     uint8_t getHour();   // hh
     uint8_t getMinute(); // mm
-    uint8_t getSecond();
-    uint8_t getDay(); // 1 to 31
+    uint8_t getSecond(); // ss
+    uint8_t getDay();    // 1 to 31
 
     String getStringDay();   // Dim, lun, Mar, Mer, Jeu, Ven, Sam,
     String getStringMonth(); // Jan, Fev, Mars, Avril, Mai, Juin, Juil, Aout, Sept, Oct, Nov, Dec
     String getStringTime();  // hh:mm:ss
-    String getStringDate();  // Lun day/mois/year
+    String getStringDate();  // day/mois/year
 
 private:
     uint8_t _adress;
