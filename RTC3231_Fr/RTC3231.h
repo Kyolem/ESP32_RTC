@@ -25,7 +25,9 @@ public:
     bool begin(uint8_t Adress);
 
     void setTime(uint8_t hh, uint8_t mm, uint8_t ss);
+    void setTime(const __FlashStringHelper *Time);
     void setDate(uint8_t index_day, uint8_t day, uint8_t index_month, uint8_t years);
+    void setDate(const __FlashStringHelper *Date, uint8_t index_day);
 
     uint8_t getYears();  // yy
     uint8_t getHour();   // hh
@@ -42,6 +44,8 @@ private:
     uint8_t _adress;
     uint8_t _binToBcd(uint8_t val);
     uint8_t _bcdToBin(uint8_t val);
+    uint8_t _getindexmonth(const __FlashStringHelper *Date);
+    uint8_t _twodigittoone(const __FlashStringHelper *Date);
 };
 
 #endif
