@@ -22,8 +22,8 @@
 
 #include <RTC3231.h>
 
-const char *month[] = {"Nat", "Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jui", "Aou", "Sep", "Oct", "Nov", "Dec"};
-const char *days[] = {"Nat", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
+const char *month[] = {"Nat", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+const char *days[] = {"Nat", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
 
 RTC3231 ::RTC3231()
 {
