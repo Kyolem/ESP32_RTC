@@ -12,7 +12,7 @@ To set the actual Time you have to put in order :
 The hours : 0 ... 24.  
 The minutes: 0 ... 59.    
 And the seconds : 0 ... 59.
-> I don't have make an auto time set fonction yet.
+Or use F(__TIME__) to auto set the Time with the Time when you've open the program
 
 ` void setDate(uint8_t index_day, uint8_t day, uint8_t index_month, uint8_t years) `  
 This fonction is use to set the date.  
@@ -21,7 +21,7 @@ The index day like 1 = Monday, 2 = Tuesday, ... ,7 = Sunday.
 The day like 26.
 The index month like 1 = January, 2 = February, ... 12 = December.
 And the years like 25 for 2025.
-> Like the ` setTime() ` I don't have make an auto time set fonction yet.
+Or use F(__DATE__) to auto set the Date with the Date when you've open the program
 
 ` uint8_t getYears() `  
 This fonction return the year in uint8_t like 23, 24 ,25 etc.
