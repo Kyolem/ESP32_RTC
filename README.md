@@ -1,4 +1,4 @@
-# ESP32_RTC
+# RTC_DS3231
 #### This is a library to use a DS3231 with many microcontroller who use Arduino and platformIO IDE.
 #### I made this library with my friend Mathieu.
 #### You have diffferent fonction with their uses :
