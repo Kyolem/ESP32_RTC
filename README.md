@@ -1,5 +1,6 @@
 # ESP32_RTC
-#### This is a library to use a DS3231 with many microcontroller
+#### This is a library to use a DS3231 with many microcontroller who use Arduino and platformIO IDE.
+#### I made this library with my friend Mathieu.
 #### You have diffferent fonction with their uses :
 
 ` bool begin(uint8_t Adress) ` 
