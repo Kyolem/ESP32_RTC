@@ -1,4 +1,4 @@
-#include <RTC3231.h>
+#include <RTC3231_Fr.h>
 
 const char *month[] = {"Nat", "Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jui", "Aou", "Sep", "Oct", "Nov", "Dec"};
 const char *days[] = {"Nat", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
