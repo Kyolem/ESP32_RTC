@@ -1,7 +1,7 @@
 #include <Arduino.h> // Includes the Arduino core library for basic functionality.
-#include "Wire.h"    // Includes the Wire library for I2C communication.
+#include <Wire.h>   // Includes the Wire library for I2C communication.
 #include <Ticker.h>  // Includes the Ticker library for periodic function execution.
-#include "RTC3231.h" // Includes the RTC3231 library for interacting with the DS3231 RTC module.
+#include <RTC3231_En.h> // Includes the RTC3231 library for interacting with the DS3231 RTC module.
 
 #define DS3231 0x68 // Defines the I2C address of the DS3231 RTC module.
 
