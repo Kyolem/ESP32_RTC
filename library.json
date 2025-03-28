@@ -1,6 +1,6 @@
 {
     "name": "RTC_DS3231",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "description": "This is a library to use the RTC3231 with many microcontroller who use the Arduino framework.",
     "keywords": "RTC3231, clock, time, timer",
     "repository": {
