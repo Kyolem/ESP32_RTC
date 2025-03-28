@@ -1,6 +1,6 @@
 {
-    "name": "RTC3231",
-    "version": "1.2.5",
+    "name": "RTC_DS3231",
+    "version": "1.2.6",
     "description": "This is a library to use the RTC3231 with many microcontroller who use the Arduino framework.",
     "keywords": "RTC3231, clock, time, timer",
     "repository": {
@@ -19,6 +19,9 @@
     "dependencies": {
         "ownername/print": "~1.3.0"
     },
-    "frameworks": "*",
-    "platforms": "*"
+    "frameworks": "Arduino, ESP8266, ESP32",
+    "platforms": "atmelavr, atmelsam, espressif8266, espressif32, microchippic32, nordicnrf52, teensy, ststm32",
+    "engines": {
+        "arduino": ">=1.8.0"
+    }
 }
